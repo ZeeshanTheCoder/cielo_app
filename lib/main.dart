@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'core/theme.dart';
+import 'core/app_router.dart';
+import 'core/app_theme.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const CieloApp());
 }
 
@@ -10,27 +12,10 @@ class CieloApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Cielo',
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
-      darkTheme: AppTheme.darkTheme,
-      home: const SplashShell(),
-    );
-  }
-}
-
-class SplashShell extends StatelessWidget {
-  const SplashShell({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'Cielo App Initialized',
-        ),
-      ),
+      theme: AppTheme.dark(),
+    routerConfig: AppRouter.router,
     );
   }
 }

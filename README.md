@@ -6,15 +6,15 @@ Flutter + Firebase Mobile Architecture
 
 ## 📌 Project Overview
 
-CIELO is a scalable Flutter-based mobile application built with Firebase integration and environment-based configuration. This repository contains the foundational architecture for the mobile app, including environment management, Firebase setup stubs, CI configuration, and clean folder structure.
+CIELO is a scalable Flutter-based mobile application built with Firebase integration and environment-based configuration. This repository contains the foundational architecture for the mobile app, including environment management, Firebase setup stubs, CI configuration, clean folder structure, and global navigation structure.
 
 This setup supports:
 
-* iOS-first builds
 * Android compatibility
-* Apple Silicon (M1/M2) support
+* Android-first builds
 * Environment-based configuration (dev / prod)
 * CI pipeline validation
+* Structured navigation (Tab + Stack + Modal)
 
 ---
 
@@ -24,6 +24,7 @@ This setup supports:
 * Dart
 * Firebase (Core, Auth, Firestore, Remote Config)
 * flutter_dotenv (Environment Management)
+* go_router (Navigation)
 * GitHub Actions (CI)
 
 ---
@@ -35,6 +36,8 @@ lib/
  ├── core/
  │    ├── colors.dart
  │    ├── theme.dart
+ │    ├── app_routes.dart
+ │    └── app_router.dart
  │
  ├── components/
  ├── screens/
@@ -129,7 +132,6 @@ Full Firebase wiring will be implemented in Card 3.3.
 
 Ensure the following:
 
-* iOS simulator launches successfully
 * Android emulator builds successfully
 * App shows base initialization shell
 * No .env files are committed
@@ -151,15 +153,58 @@ CI runs automatically on:
 
 ---
 
-## 🛡 Security Notes
+## 🧭 Navigation Architecture (Card 3.2)
 
-* Environment variables are never committed
-* Firebase credentials must remain local
-* Use `.env.example` as reference only
+Navigation is implemented using `go_router` with:
+
+* IndexedStack Tab Navigation
+* Per-tab Stack Navigation
+* Root-level Modal Overlays
+
+
+
+## 🌳 Routing Tree
+
+```
+App Root (GoRouter)
+│
+├── 🔷 Tabs (StatefulShellRoute)
+│   │
+│   ├── Today (/today) — Free
+│   │
+│   ├── Mood (/mood) — Free
+│   │     └── Sentiment (/mood/sentiment) — Pro
+│   │
+│   ├── Dream (/dream) — Free
+│   │     └── Analysis (/dream/analysis) — Pro
+│   │
+│   ├── Meditate (/meditate) — Shared
+│   │     └── Player (/meditate/player) — Shared
+│   │
+│   └── Profile (/profile) — Shared
+│         ├── Edit Profile (/profile/edit) — Shared
+│         └── Subscription (/profile/subscription) — Pro
+│
+├── 🔶 Root-Level Modals
+│   ├── Onboarding (/onboarding)
+│   ├── Upgrade (/upgrade)
+│   └── Delete Confirm (/delete-confirm)
+```
+
+
+## 🔁 Navigation Rules
+
+* All route names stored centrally in `app_routes.dart`
+* Modal routes use `parentNavigatorKey`
+* Back button works natively (iOS + Android)
+* No gesture-only transitions
+* UI buttons trigger navigation explicitly
 
 ---
 
-## 🧩 Current Status (Card 3.1)
+## 📌 Current Status
+
+### Card 3.1
 
 * Flutter project bootstrapped
 * Clean folder architecture created
@@ -168,11 +213,27 @@ CI runs automatically on:
 * iOS & Android builds confirmed
 * CI pipeline configured
 
+### Card 3.2
+
+* 5-tab bottom navigation implemented
+* Per-tab stack navigation functional
+* Modal overlays implemented
+* All routes centrally defined
+* Native back button behavior confirmed
+* No build errors on simulator
+
+---
+
+## 🛡 Security Notes
+
+* Environment variables are never committed
+* Firebase credentials must remain local
+* Use `.env.example` as reference only
+
 ---
 
 ## 📌 Next Development Phases
 
-* Card 3.2 — Navigation System (Tab + Stack + Modal)
 * Card 3.3 — Firebase SDK Integration
 * Card 3.4 — Secure User Profile Creation & Storage
 
