@@ -39,7 +39,7 @@ class DeleteConfirmModal extends StatelessWidget {
                     child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(
-                            color: AppColors.whiteColor.withOpacity(0.18)),
+                            color: AppColors.whiteColor.withValues(alpha: 0.18)),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16)),
                       ),

@@ -21,7 +21,7 @@ class UpgradeModal extends StatelessWidget {
                   onPressed: () => Navigator.of(context).maybePop(),
                   child: Text('Close',
                       style: TextStyle(
-                          color: AppColors.whiteColor.withOpacity(0.7))),
+                          color: AppColors.whiteColor.withValues(alpha: 0.7))),
                 ),
               ),
               const SizedBox(height: 8),

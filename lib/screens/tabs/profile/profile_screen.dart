@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                    color: AppColors.redColor.withOpacity(0.55), width: 2),
+                    color: AppColors.redColor.withValues(alpha: 0.55), width: 2),
               ),
               child: ClipOval(
                 child: Image.asset(
@@ -33,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
                     return Container(
                       color: AppColors.blueColor,
                       child: Icon(Icons.person,
-                          color: AppColors.whiteColor.withOpacity(0.7),
+                          color: AppColors.whiteColor.withValues(alpha: 0.7),
                           size: 40),
                     );
                   },
@@ -52,7 +52,7 @@ class ProfileScreen extends StatelessWidget {
               'alex.morgan@example.com',
               style: TextStyle(
                 fontSize: 14,
-                color: AppColors.whiteColor.withOpacity(0.55),
+                color: AppColors.whiteColor.withValues(alpha: 0.55),
               ),
             ),
 
@@ -68,7 +68,7 @@ class ProfileScreen extends StatelessWidget {
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(
-                          color: AppColors.redColor.withOpacity(0.9),
+                          color: AppColors.redColor.withValues(alpha: 0.9),
                           width: 1.5),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(22)),
@@ -91,12 +91,12 @@ class ProfileScreen extends StatelessWidget {
                     color: AppColors.blueColor,
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                        color: AppColors.whiteColor.withOpacity(0.06)),
+                        color: AppColors.whiteColor.withValues(alpha: 0.06)),
                   ),
                   child: IconButton(
                     onPressed: () => context.go(AppRoutes.subscriptionPath),
                     icon: Icon(Icons.settings,
-                        color: AppColors.whiteColor.withOpacity(0.75)),
+                        color: AppColors.whiteColor.withValues(alpha: 0.75)),
                   ),
                 ),
               ],
@@ -111,7 +111,7 @@ class ProfileScreen extends StatelessWidget {
                 color: AppColors.blueColor,
                 borderRadius: BorderRadius.circular(26),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
               ),
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -139,7 +139,7 @@ class ProfileScreen extends StatelessWidget {
                   Text(
                     'Unlock unlimited mood analysis, dream\ninterpretation, and exclusive\nmeditations.',
                     style: TextStyle(
-                      color: AppColors.whiteColor.withOpacity(0.60),
+                      color: AppColors.whiteColor.withValues(alpha: 0.60),
                       height: 1.35,
                     ),
                   ),
@@ -231,7 +231,7 @@ class ProfileScreen extends StatelessWidget {
 
             Text(
               'Version 1.0.2 (Build 240)',
-              style: TextStyle(color: AppColors.whiteColor.withOpacity(0.35)),
+              style: TextStyle(color: AppColors.whiteColor.withValues(alpha: 0.35)),
             ),
           ],
         ),
@@ -293,12 +293,12 @@ class _SettingTile extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.blueColor,
           borderRadius: BorderRadius.circular(22),
-          border: Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+          border: Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Row(
           children: [
-            Icon(icon, color: AppColors.whiteColor.withOpacity(0.65)),
+            Icon(icon, color: AppColors.whiteColor.withValues(alpha: 0.65)),
             const SizedBox(width: 12),
             Expanded(
               child: Text(
@@ -308,7 +308,7 @@ class _SettingTile extends StatelessWidget {
               ),
             ),
             Icon(Icons.chevron_right,
-                color: AppColors.whiteColor.withOpacity(0.35)),
+                color: AppColors.whiteColor.withValues(alpha: 0.35)),
           ],
         ),
       ),

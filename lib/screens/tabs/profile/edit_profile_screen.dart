@@ -7,20 +7,20 @@ class EditProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     InputDecoration deco(String hint, IconData icon) => InputDecoration(
-          prefixIcon: Icon(icon, color: AppColors.whiteColor.withOpacity(0.54)),
+          prefixIcon: Icon(icon, color: AppColors.whiteColor.withValues(alpha: 0.54)),
           hintText: hint,
-          hintStyle: TextStyle(color: AppColors.whiteColor.withOpacity(0.38)),
+          hintStyle: TextStyle(color: AppColors.whiteColor.withValues(alpha: 0.38)),
           filled: true,
           fillColor: AppColors.blueColor,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide:
-                BorderSide(color: AppColors.whiteColor.withOpacity(0.06)),
+                BorderSide(color: AppColors.whiteColor.withValues(alpha: 0.06)),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide:
-                BorderSide(color: AppColors.whiteColor.withOpacity(0.06)),
+                BorderSide(color: AppColors.whiteColor.withValues(alpha: 0.06)),
           ),
         );
 
@@ -55,13 +55,13 @@ class EditProfileScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                            color: AppColors.whiteColor.withOpacity(0.12),
+                            color: AppColors.whiteColor.withValues(alpha: 0.12),
                             width: 2),
-                        color: AppColors.whiteColor.withOpacity(0.06),
+                        color: AppColors.whiteColor.withValues(alpha: 0.06),
                       ),
                       child: Icon(Icons.person,
                           size: 42,
-                          color: AppColors.whiteColor.withOpacity(0.7)),
+                          color: AppColors.whiteColor.withValues(alpha: 0.7)),
                     ),
                     const Positioned(
                       right: 0,
@@ -105,7 +105,7 @@ class EditProfileScreen extends StatelessWidget {
                 readOnly: true,
                 decoration: deco('Leo', Icons.star_outline).copyWith(
                   suffixIcon: Icon(Icons.chevron_right,
-                      color: AppColors.whiteColor.withOpacity(0.38)),
+                      color: AppColors.whiteColor.withValues(alpha: 0.38)),
                 ),
               ),
               const SizedBox(height: 14),
@@ -130,7 +130,7 @@ class EditProfileScreen extends StatelessWidget {
                 readOnly: true,
                 decoration: deco('English', Icons.language).copyWith(
                   suffixIcon: Icon(Icons.chevron_right,
-                      color: AppColors.whiteColor.withOpacity(0.38)),
+                      color: AppColors.whiteColor.withValues(alpha: 0.38)),
                 ),
               ),
               const Spacer(),

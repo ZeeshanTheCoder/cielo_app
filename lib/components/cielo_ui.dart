@@ -13,6 +13,6 @@ class CieloUI {
   static BoxDecoration card() => BoxDecoration(
         color: panel,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+        border: Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
       );
 }

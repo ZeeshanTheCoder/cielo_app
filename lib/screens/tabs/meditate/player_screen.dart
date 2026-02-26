@@ -34,7 +34,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                 height: 120,
                 width: 120,
                 decoration: BoxDecoration(
-                  color: AppColors.whiteColor.withOpacity(0.06),
+                  color: AppColors.whiteColor.withValues(alpha: 0.06),
                   borderRadius: BorderRadius.circular(26),
                 ),
               ),
@@ -49,13 +49,13 @@ class _PlayerScreenState extends State<PlayerScreen> {
                 children: [
                   Text('02:14',
                       style: TextStyle(
-                          color: AppColors.whiteColor.withOpacity(0.6))),
+                          color: AppColors.whiteColor.withValues(alpha: 0.6))),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Container(
                       height: 6,
                       decoration: BoxDecoration(
-                        color: AppColors.whiteColor.withOpacity(0.12),
+                        color: AppColors.whiteColor.withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(6),
                       ),
                     ),
@@ -63,7 +63,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                   const SizedBox(width: 12),
                   Text('10 min',
                       style: TextStyle(
-                          color: AppColors.whiteColor.withOpacity(0.6))),
+                          color: AppColors.whiteColor.withValues(alpha: 0.6))),
                 ],
               ),
               const SizedBox(height: 18),
@@ -71,7 +71,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.skip_previous,
-                      size: 34, color: AppColors.whiteColor.withOpacity(0.55)),
+                      size: 34, color: AppColors.whiteColor.withValues(alpha: 0.55)),
                   const SizedBox(width: 18),
                   Container(
                     height: 78,
@@ -85,7 +85,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                   ),
                   const SizedBox(width: 18),
                   Icon(Icons.skip_next,
-                      size: 34, color: AppColors.whiteColor.withOpacity(0.55)),
+                      size: 34, color: AppColors.whiteColor.withValues(alpha: 0.55)),
                 ],
               ),
               const SizedBox(height: 16),

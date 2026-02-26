@@ -23,7 +23,7 @@ class DreamScreen extends StatelessWidget {
             Text(
               'Decode your subconscious mind.',
               style: TextStyle(
-                color: AppColors.whiteColor.withOpacity(0.55),
+                color: AppColors.whiteColor.withValues(alpha: 0.55),
                 fontSize: 14,
               ),
             ),
@@ -37,7 +37,7 @@ class DreamScreen extends StatelessWidget {
                 color: AppColors.blueColor,
                 borderRadius: BorderRadius.circular(20),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
               ),
               padding: const EdgeInsets.all(18),
               child: Column(
@@ -54,10 +54,10 @@ class DreamScreen extends StatelessWidget {
                           height: 52,
                           width: 52,
                           decoration: BoxDecoration(
-                            color: AppColors.blackColor.withOpacity(0.20),
+                            color: AppColors.blackColor.withValues(alpha: 0.20),
                             shape: BoxShape.circle,
                             border: Border.all(
-                              color: AppColors.whiteColor.withOpacity(0.08),
+                              color: AppColors.whiteColor.withValues(alpha: 0.08),
                             ),
                           ),
                           child: Center(
@@ -89,7 +89,7 @@ class DreamScreen extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 13,
                             height: 1.35,
-                            color: AppColors.whiteColor.withOpacity(0.6),
+                            color: AppColors.whiteColor.withValues(alpha: 0.6),
                           ),
                         ),
 

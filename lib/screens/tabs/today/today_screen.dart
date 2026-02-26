@@ -50,7 +50,7 @@ class TodayScreen extends StatelessWidget {
                 color: AppColors.blueColor,
                 borderRadius: BorderRadius.circular(18),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
               ),
               child: InkWell(
                 borderRadius: BorderRadius.circular(18),
@@ -84,7 +84,7 @@ class TodayScreen extends StatelessWidget {
                     fit: BoxFit.cover),
                 borderRadius: BorderRadius.circular(26),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
               ),
               padding: const EdgeInsets.all(8),
               child: Center(
@@ -95,7 +95,7 @@ class TodayScreen extends StatelessWidget {
                     fontSize: 22,
                     height: 1.5,
                     fontWeight: FontWeight.w500,
-                    color: AppColors.whiteColor.withOpacity(0.95),
+                    color: AppColors.whiteColor.withValues(alpha: 0.95),
                   ),
                 ),
               ),
@@ -108,7 +108,7 @@ class TodayScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w800,
-                color: AppColors.whiteColor.withOpacity(0.9),
+                color: AppColors.whiteColor.withValues(alpha: 0.9),
               ),
             ),
 
@@ -121,7 +121,7 @@ class TodayScreen extends StatelessWidget {
                 color: AppColors.blueColor,
                 borderRadius: BorderRadius.circular(22),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
               ),
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -133,7 +133,7 @@ class TodayScreen extends StatelessWidget {
                         height: 42,
                         width: 42,
                         decoration: BoxDecoration(
-                          color: AppColors.whiteColor.withOpacity(0.06),
+                          color: AppColors.whiteColor.withValues(alpha: 0.06),
                           borderRadius: BorderRadius.circular(14),
                         ),
                         child: Image(
@@ -176,7 +176,7 @@ class TodayScreen extends StatelessWidget {
                     child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(
-                            color: AppColors.redColor.withOpacity(0.9),
+                            color: AppColors.redColor.withValues(alpha: 0.9),
                             width: 1.5),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
@@ -215,7 +215,7 @@ class _Pill extends StatelessWidget {
       decoration: BoxDecoration(
         color: bg,
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+        border: Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
       ),
       child: Text(
         text,

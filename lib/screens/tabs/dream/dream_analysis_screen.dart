@@ -26,7 +26,7 @@ class DreamAnalysisScreen extends StatelessWidget {
                     onPressed: () => Navigator.of(context).maybePop(),
                     child: Text('Close',
                         style: TextStyle(
-                            color: AppColors.whiteColor.withOpacity(0.7))),
+                            color: AppColors.whiteColor.withValues(alpha: 0.7))),
                   )
                 ],
               ),
@@ -72,7 +72,7 @@ class DreamAnalysisScreen extends StatelessWidget {
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     side:
-                        BorderSide(color: AppColors.redColor.withOpacity(0.8)),
+                        BorderSide(color: AppColors.redColor.withValues(alpha: 0.8)),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16)),
                   ),

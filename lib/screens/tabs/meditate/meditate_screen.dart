@@ -28,7 +28,7 @@ class MeditateScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(26),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
                 image: const DecorationImage(
                   image: AssetImage('assets/images/meditate.png'),
                   fit: BoxFit.cover,
@@ -45,8 +45,8 @@ class MeditateScreen extends StatelessWidget {
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [
-                            AppColors.blackColor.withOpacity(0.30),
-                            AppColors.blackColor.withOpacity(0.65),
+                            AppColors.blackColor.withValues(alpha: 0.30),
+                            AppColors.blackColor.withValues(alpha: 0.65),
                           ],
                         ),
                       ),
@@ -176,7 +176,7 @@ class MeditateScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.blueColor,
           borderRadius: BorderRadius.circular(22),
-          border: Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+          border: Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
         child: Row(
@@ -192,17 +192,17 @@ class MeditateScreen extends StatelessWidget {
                     width: 62,
                     fit: BoxFit.cover,
                     color:
-                        locked ? AppColors.blackColor.withOpacity(0.45) : null,
+                        locked ? AppColors.blackColor.withValues(alpha: 0.45) : null,
                     colorBlendMode: locked ? BlendMode.darken : null,
                   ),
                   if (locked)
                     Positioned.fill(
                       child: Container(
-                        color: AppColors.blackColor.withOpacity(0.35),
+                        color: AppColors.blackColor.withValues(alpha: 0.35),
                         child: Center(
                           child: Icon(
                             Icons.lock_outline,
-                            color: AppColors.whiteColor.withOpacity(0.55),
+                            color: AppColors.whiteColor.withValues(alpha: 0.55),
                             size: 22,
                           ),
                         ),
@@ -226,8 +226,8 @@ class MeditateScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                       color: locked
-                          ? AppColors.whiteColor.withOpacity(0.45)
-                          : AppColors.whiteColor.withOpacity(0.95),
+                          ? AppColors.whiteColor.withValues(alpha: 0.45)
+                          : AppColors.whiteColor.withValues(alpha: 0.95),
                     ),
                   ),
                   const SizedBox(height: 6),
@@ -236,8 +236,8 @@ class MeditateScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12,
                       color: locked
-                          ? AppColors.whiteColor.withOpacity(0.32)
-                          : AppColors.whiteColor.withOpacity(0.55),
+                          ? AppColors.whiteColor.withValues(alpha: 0.32)
+                          : AppColors.whiteColor.withValues(alpha: 0.55),
                     ),
                   ),
                 ],
@@ -252,7 +252,7 @@ class MeditateScreen extends StatelessWidget {
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: locked
-                      ? AppColors.whiteColor.withOpacity(0.18)
+                      ? AppColors.whiteColor.withValues(alpha: 0.18)
                       : AppColors.redColor,
                   width: 1.6,
                 ),
@@ -261,7 +261,7 @@ class MeditateScreen extends StatelessWidget {
               child: Icon(
                 Icons.play_arrow,
                 color: locked
-                    ? AppColors.whiteColor.withOpacity(0.18)
+                    ? AppColors.whiteColor.withValues(alpha: 0.18)
                     : AppColors.redColor,
               ),
             ),

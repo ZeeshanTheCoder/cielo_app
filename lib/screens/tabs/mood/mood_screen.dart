@@ -45,7 +45,7 @@ class _MoodScreenState extends State<MoodScreen> {
             Text(
               'Reflect on your day and gain new insights.',
               style: TextStyle(
-                  color: AppColors.whiteColor.withOpacity(0.55), fontSize: 14),
+                  color: AppColors.whiteColor.withValues(alpha: 0.55), fontSize: 14),
             ),
             const SizedBox(height: 14),
 
@@ -56,7 +56,7 @@ class _MoodScreenState extends State<MoodScreen> {
                 color: AppColors.blueColor,
                 borderRadius: BorderRadius.circular(26),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
               ),
               padding: const EdgeInsets.all(18),
               child: Column(
@@ -83,7 +83,7 @@ class _MoodScreenState extends State<MoodScreen> {
                               width: 54,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: AppColors.whiteColor.withOpacity(0.05),
+                                color: AppColors.whiteColor.withValues(alpha: 0.05),
                                 border: Border.all(
                                   color: isSel
                                       ? AppColors.redColor
@@ -94,7 +94,7 @@ class _MoodScreenState extends State<MoodScreen> {
                                     ? [
                                         BoxShadow(
                                           color: AppColors.redColor
-                                              .withOpacity(0.25),
+                                              .withValues(alpha: 0.25),
                                           blurRadius: 18,
                                         )
                                       ]
@@ -112,7 +112,7 @@ class _MoodScreenState extends State<MoodScreen> {
                               moods[i].$1,
                               style: TextStyle(
                                 fontSize: 12,
-                                color: AppColors.whiteColor.withOpacity(0.75),
+                                color: AppColors.whiteColor.withValues(alpha: 0.75),
                               ),
                             ),
                           ],
@@ -128,10 +128,10 @@ class _MoodScreenState extends State<MoodScreen> {
                     width: double.infinity,
                     height: 120,
                     decoration: BoxDecoration(
-                      color: AppColors.blackColor.withOpacity(0.22),
+                      color: AppColors.blackColor.withValues(alpha: 0.22),
                       borderRadius: BorderRadius.circular(18),
                       border: Border.all(
-                          color: AppColors.whiteColor.withOpacity(0.06)),
+                          color: AppColors.whiteColor.withValues(alpha: 0.06)),
                     ),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 14, vertical: 10),
@@ -140,11 +140,11 @@ class _MoodScreenState extends State<MoodScreen> {
                       maxLines: null,
                       expands: true,
                       style: TextStyle(
-                          color: AppColors.whiteColor.withOpacity(0.9)),
+                          color: AppColors.whiteColor.withValues(alpha: 0.9)),
                       decoration: InputDecoration(
                         hintText: 'Today I felt...',
                         hintStyle: TextStyle(
-                            color: AppColors.whiteColor.withOpacity(0.35)),
+                            color: AppColors.whiteColor.withValues(alpha: 0.35)),
                         border: InputBorder.none,
                         isCollapsed: true,
                       ),
@@ -189,7 +189,7 @@ class _MoodScreenState extends State<MoodScreen> {
                 color: AppColors.blueColor,
                 borderRadius: BorderRadius.circular(26),
                 border:
-                    Border.all(color: AppColors.whiteColor.withOpacity(0.06)),
+                    Border.all(color: AppColors.whiteColor.withValues(alpha: 0.06)),
               ),
               padding: const EdgeInsets.all(18),
               child: Column(
@@ -206,7 +206,7 @@ class _MoodScreenState extends State<MoodScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       border: Border.all(
-                          color: AppColors.whiteColor.withOpacity(0.06)),
+                          color: AppColors.whiteColor.withValues(alpha: 0.06)),
                       image: const DecorationImage(
                         image: AssetImage('assets/images/chart.png'),
                         fit: BoxFit.cover,
@@ -214,7 +214,7 @@ class _MoodScreenState extends State<MoodScreen> {
                     ),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: AppColors.blackColor.withOpacity(0.55),
+                        color: AppColors.blackColor.withValues(alpha: 0.55),
                         borderRadius: BorderRadius.circular(18),
                       ),
                       child: Center(
@@ -225,7 +225,7 @@ class _MoodScreenState extends State<MoodScreen> {
                               height: 32,
                               width: 32,
                               decoration: BoxDecoration(
-                                color: AppColors.redColor.withOpacity(0.9),
+                                color: AppColors.redColor.withValues(alpha: 0.9),
                                 shape: BoxShape.circle,
                               ),
                               child: Image.asset(
@@ -244,7 +244,7 @@ class _MoodScreenState extends State<MoodScreen> {
                               'Track your emotional patterns over time.',
                               style: TextStyle(
                                 fontSize: 12,
-                                color: AppColors.whiteColor.withOpacity(0.6),
+                                color: AppColors.whiteColor.withValues(alpha: 0.6),
                               ),
                             ),
                           ],
